@@ -1,0 +1,20 @@
+#container{
+    display: flex;
+}
+
+.head{
+    font-weight: bold;
+
+}
+
+.dock{
+    background-color: grey;
+}
+
+.cargo-hauler{
+    background-color: grey;
+}
+
+.cargoShips{
+    background-color: grey;
+}

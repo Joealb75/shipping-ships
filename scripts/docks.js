@@ -1,10 +1,9 @@
 import { getDocks } from "./database.js"
 
-
 export const DockList = () => {
     const docks = getDocks()
 
-    let docksHTML = "<ul>"
+    let docksHTML = `<ul>`
 
     for (const dock of docks) {
         // Convert each dock object to an <li> and append to the docksHTML string
@@ -16,8 +15,3 @@ export const DockList = () => {
     return docksHTML
 }
 
-const test = DockList()
-
-const mainContainer = document.querySelector("#container")
-
-mainContainer.innerHTML = test
