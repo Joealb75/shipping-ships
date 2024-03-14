@@ -15,3 +15,11 @@ export const DockList = () => {
     return docksHTML
 }
 
+document.addEventListener(
+    "click",
+    (clickEvent) =>{
+        const userClicked = clickEvent.target
+        
+    }
+
+)

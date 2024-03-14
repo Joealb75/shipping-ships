@@ -3,19 +3,6 @@ const haulers = getHaulingShips()
 const cargo = getCargoShips()
 
 // needs to show how many ships the hauler is carrying 
-document.addEventListener(
-    "click",
-    (clickEvent) =>{
-        const userClicked = clickEvent.target
-        const haulerId = userClicked.dataset.shipId
-
-        for (let i=0; i < cargo.length; i++){
-            if(cargo.haulerId === haulerId)
-                window.alert(`This hauler is carrying  ships`)
-        }
-    }
-
-)
 
 export const haulerList = () => {
     
@@ -27,8 +14,6 @@ export const haulerList = () => {
         haulerHTML += `<li
         data-shipId="${ship.id}"
         data-type="hauler"
-        
-        
         >${ship.name} </li>`
     }
 
@@ -36,6 +21,29 @@ export const haulerList = () => {
 
     return haulerHTML
 }
+
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const userClicked = clickEvent.target
+
+        if(userClicked.dataset.type === "hauler"){
+        
+            const haulerId = userClicked.dataset.shipid
+
+            let cargoCounter = 0
+            for (const ship of cargo) {
+                if(parseInt(haulerId) === ship.haulerID){
+                    cargoCounter++
+                }
+            }
+            window.alert(`This hauler is carrying ${cargoCounter} ships`)
+        }
+    }
+)
+
+
+
 
 
 
