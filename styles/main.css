@@ -1,5 +1,15 @@
 #container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.appHTML{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+    
 }
 
 .head{
@@ -9,12 +19,18 @@
 
 .dock{
     background-color: grey;
+    margin: 50px;
+    padding: 5px;
 }
 
 .cargo-hauler{
     background-color: grey;
+    margin: 50px;
+    padding: 5px;
 }
 
 .cargoShips{
     background-color: grey;
+    margin: 50px;
+    padding: 5px;
 }

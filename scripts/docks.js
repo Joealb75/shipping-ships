@@ -29,7 +29,7 @@ document.addEventListener(
 
             const dockID = userClicked.dataset.dockid
             
-            let currentHaulerShip = {name: "invalid"}
+            let currentHaulerShip = {name: "nothing"}
             
             let haulerArray = []
 
@@ -37,15 +37,19 @@ document.addEventListener(
                 
                 if(parseInt(dockID) === ship.FKDock ){ 
                     haulerArray.push(ship.name)
-                 } else if(parseInt(dockID) === undefined){
-                    window.alert(`The ${dockLocation} dock is currently unloading nothing `)
-
-                    break
-                 }
-                        
+                    haulerArray.sort()
+                 } 
+            }
+            
+            if (haulerArray.length > 0){
+                window.alert(`The ${dockLocation} dock is currently unloading ${haulerArray.join(", ")}`)
+            } else {
+                dockLocation = userClicked.dataset.type
+                window.alert(`The ${dockLocation} dock is currently unloading nothing `)
+            }
                 
                 
-            } window.alert(`The ${dockLocation} dock is currently unloading ${haulerArray.join(", ")}`)
+        
 
         }
     }

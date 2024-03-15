@@ -7,7 +7,7 @@ import { cargoList } from "./cargoShips.js";
 const mainContainer = document.querySelector("#container")
 
 const applicationHTML = `
-    <article>
+    <article class = "appHTML">
 
         <section class="dock"> 
             <h2 class = "head">Docks</h2>
